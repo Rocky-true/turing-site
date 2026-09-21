@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图灵·工作室 — TURING STUDIO</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wordmark">图灵·工作室 <span class="wordmark-latin">TURING STUDIO</span></div>
+  <nav>
+    <a href="#intro">简介</a><a href="#updates">动态</a><a href="#fields">方向</a><a href="#projects">项目</a><a href="#pubs">论文</a><a href="#facilities">设施</a><a href="#events">日程</a><a href="#roster">成员</a><a href="#join">招新</a>
+  </nav>
+  <div class="cluster-state" id="clusterState">λ CLUSTER: …</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-type">
+      <h1>图灵<br><em>工作室</em></h1>
+      <p class="hero-sub"><span id="typewriter"></span></p>
+    </div>
+    <aside class="hero-math" aria-hidden="true">
+      <div class="math-line">grep -r "bug" / | head -1</div>
+      <div class="math-line">./deploy --env=prod --rollback</div>
+      <div class="math-line">curl -s 3node.cluster/api/uptime</div>
+      <div class="math-note">SYS · K8S · SRE<br>TEAM EST. 2019</div>
+    </aside>
+  </section>
+
+  <section id="intro" class="editorial">
+    <h2 class="section-title">我们是一支<br>小规模基础架构团队</h2>
+    <div class="editorial-body">
+      <p>图灵·工作室专注于云原生基础架构与SRE实践：三节点Kubernetes集群、全自动CI/CD、可观测性与告警体系——每一行配置都经过Code Review，每一次发布都可秒级回滚。</p>
+      <p>我们不是运维工单流水线，而是一个持续演进的"研发一体化"小队。底层基建自己造，故障自己扛，监控自己搭——把10%的复杂自己啃下来，让业务团队获得100%的稳定。</p>
+      <span class="footnote">本页托管于自建K8s集群(3Node) · Ingress-Nginx · HTTPS · Uptime 99.9%</span>
+    </div>
+  </section>
+
+  <section id="updates" class="updates">
+    <h2 class="section-title">UPDATES</h2>
+    <div class="feed">
+      <div class="feed-item"><time>2026-08-30</time><span class="feed-dot"></span><p>集群迁移至3节点高可用架构，Ingress-HTTPS将于本周上线</p></div>
+      <div class="feed-item"><time>2026-08-18</time><span class="feed-dot"></span><p>「GitOps全自动发布」workshop 面向全校开放报名</p></div>
+      <div class="feed-item"><time>2026-07-29</time><span class="feed-dot"></span><p>论文《容器环境下的故障自愈实践》被校级学术期刊收录</p></div>
+      <div class="feed-item"><time>2026-06-11</time><span class="feed-dot"></span><p>实验室搭建 LOKI 日志平台，告警接入钉钉机器人</p></div>
+    </div>
+  </section>
+
+  <section id="fields" class="fields">
+    <h2 class="section-title">研究方向 · 项目组</h2>
+    <ol class="field-list">
+      <li><span class="no">01</span><div><h3>容器与K8s平台</h3><p>kubeadm集群 · Calico · PV/PVC · Ingress</p></div><div class="group-members"><p>阿达【平台组】萨宾【平台组】</p></div></li>
+      <li><span class="no">02</span><div><h3>交付流水线</h3><p>CI/CD · Trivy · ArgoCD · cert-manager</p></div><div class="group-members"><p>萨宾【流水线组】E.王【流水线组】</p></div></li>
+      <li><span class="no">03</span><div><h3>可观测性SRE</h3><p>Prometheus · Loki · 钉钉告警 · 日报巡检</p></div><div class="group-members"><p>M.李【SRE组】阿达【SRE组】</p></div></li>
+    </ol>
+    <div class="law"><code>$ kubectl get cluster -o human-read</code></div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title">PROJECTS</h2>
+    <ul class="repo-list">
+      <li><span class="repo-status up">●</span><h3>turing-infra</h3><p>K8s集群资源管理(Namespace/Ingress/PV定义 as Code)</p><span class="repo-meta">yaml · ongoing</span></li>
+      <li><span class="repo-status up">●</span><h3>turing-cicd</h3><p>GitLab Runner 流水线模板: 测试→扫描→镜像→部署</p><span class="repo-meta">groovy · v1.3</span></li>
+      <li><span class="repo-status warn">●</span><h3>turing-ops</h3><p>每日巡检脚本+钉钉日报(磁盘/节点/告警聚合)</p><span class="repo-meta">shell · v0.9</span></li>
+      <li><span class="repo-status down">●</span><h3>turing-legacy</h3><p>弃用中的旧单体站点(将被本站替换)</p><span class="repo-meta">php · archived</span></li>
+    </ul>
+  </section>
+
+  <section id="pubs" class="pubs">
+    <h2 class="section-title">PUBLICATIONS</h2>
+    <ol class="pub-list">
+      <li><p>阿达, 萨宾. "容器环境下的故障自愈实践". 校级学术期刊, 2026.</p></li>
+      <li><p>M.李. "基于Prometheus的课堂集群指标治理". 校创新实验报告, 2025.</p></li>
+      <li><p>E.王, 阿达. "从30分钟到5分钟: 实验室交付流水线重设计". 项目实践报告, 2025.</p></li>
+    </ol>
+  </section>
+
+  <section id="facilities" class="facilities">
+    <h2 class="section-title">FACILITIES</h2>
+    <table>
+      <thead><tr><th>HOST</th><th>SPEC</th><th>ROLE</th></tr></thead>
+      <tbody>
+        <tr><td>k8s-master</td><td>8C · 32G</td><td>控制面+基础设施(MySQL/Nacos/Redis)</td></tr>
+        <tr><td>k8s-worker1</td><td>2C · 4G</td><td>业务工作负载</td></tr>
+        <tr><td>k8s-worker2</td><td>2C · 2G</td><td>业务工作负载</td></tr>
+        <tr><td>nfs-store</td><td>10G+ 持续增长</td><td>动态存储(PV/PVC)</td></tr>
+        <tr><td>harbor.registry</td><td>1C · 2G</td><td>私有镜像仓库</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="events" class="events">
+    <h2 class="section-title">EVENTS 本周</h2>
+    <ul class="event-list">
+      <li><time>周三 20:00</time><p>SRE例会 — 上期告警复盘</p></li>
+      <li><time>周五 18:30</time><p>公开课: Ingress-Nginx与HTTPS</p></li>
+      <li><time>周六 14:00</time><p>集群实操轮值(新人随行)</p></li>
+    </ul>
+  </section>
+
+  <section id="roster" class="roster">
+    <h2 class="section-title">MEMBER DIRECTORY</h2>
+    <table>
+      <thead><tr><th>NAME</th><th>ROLE</th><th>NOTABLE</th></tr></thead>
+      <tbody id="roster-body">
+        <tr><td>加载中…</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="join" class="join">
+    <p class="join-kicker">RECRUIT</p>
+    <h2 class="join-title">招募<br><span>±</span></h2>
+    <div class="join-body">
+      <p>面向全校开放 —— 有数学洁癖、怀疑精神、或只是好奇机器如何思考的人。</p>
+      <button class="cta" onclick="alert('join@turing-studio.org')">申请席位 →</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© 1987-2026 图灵·工作室</div>
+  <div class="footer-mono">MAINTAINED BY SRE GROUP · 3NODE HA · UPTIME 99.9%</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
